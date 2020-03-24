@@ -1,9 +1,9 @@
 > The cloud ML follows the following tree archtecture 
 > >Setup.py 
 >>trainer
->>>task.py
->>>__init__.py
->>>model.py
+>>>1.task.py
+>>>2. __init__.py
+>>>3. model.py
 
 > The setup.py file basicly helps in installing the custom packages needed for creating the ML model.
 > The task.py has four functions 
