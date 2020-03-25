@@ -21,5 +21,9 @@ class DevConfig(BaseConfig):
    REDIS_HOST = '104.154.59.49'
    REDIS_DB = 0
    REDIS_PORT = 6379
+   MONGO_HOST = '34.82.47.46'
+   MONGO_PORT = 27017
+   MONGO_DB = 'gradHousing'
+
 
 
