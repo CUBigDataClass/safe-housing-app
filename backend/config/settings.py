@@ -22,4 +22,5 @@ class DevConfig(BaseConfig):
    REDIS_DB = 0
    REDIS_PORT = 6379
 
-
+   ES_HOST = '146.148.94.194'
+   ES_PORT = 9200
