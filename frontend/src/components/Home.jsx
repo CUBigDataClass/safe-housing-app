@@ -5,6 +5,7 @@ import '../styles/home.css';
 import MiddleHomeSection from './MiddleHomeSection.jsx';
 import InfoFooter from './InfoFooter.jsx';
 import Footer from './Footer.jsx';
+import FavouriteTeam from './DropDownSearchApp';
 
 const Home = (props) => {
     //Probably need to pass down image from api or amazon on props and set image here
@@ -21,11 +22,8 @@ const Home = (props) => {
                             <label className='rent'>Rent</label>
                             <label className='sell'>Sell</label>
                         </div>
-                        <div className='searchInputAndButton'>
-                            <input placeholder='Enter an address, neighborhood, city or ZIP code' className='searchInput' type='text' />
-                            <button className='searchButton' type='submit'>
-                                <h5 className='searchBtnText'>Search</h5>
-                            </button>
+                        <div className='searchInputAndButtons'>
+                        <FavouriteTeam/>
                         </div>
                     </section>
                 </div>
