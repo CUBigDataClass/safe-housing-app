@@ -1,0 +1,45 @@
+{
+  "name": "zillow-clone",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "axios": "^0.16.2",
+    "clsx": "latest",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-map-gl": "^5.2.3",
+    "react-redux": "^5.0.5",
+    "react-router": "^3.2.6",
+    "react-scripts": "1.0.10",
+    "react-scrollbar": "^0.5.6",
+    "react-slick": "^0.14.11",
+    "react-split-pane": "^0.1.91",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.88.2",
+    "slick-carousel": "^1.7.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProjectsOnTheSide/zillow-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProjectsOnTheSide/zillow-clone/issues"
+  },
+  "homepage": "https://github.com/ProjectsOnTheSide/zillow-clone#readme",
+  "devDependencies": {}
+}

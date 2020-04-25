@@ -1,0 +1,257 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.homeContainer {
+    width: 100%;
+    background: url('./house1.png') center no-repeat;
+    background-size: cover;
+}
+
+
+.videoSection {
+    width: 100%;
+    min-height: 543px;
+    max-height: 543px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBoxHeader {
+    width: 800px;
+    height: 8vh;
+    font-size: 20px;
+    padding-bottom: 30px;
+    /*font-weight: 300;*/
+    text-align: center;
+    /*text-shadow: 0 0 4px #666;*/
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.searchBox {
+    width: 700px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.searchBody {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.buy,
+.rent,
+.sell,
+.zestimate {
+    width: 150px;
+    height: 37px;
+    text-align: center;
+    padding: 10px 0 0;
+    margin-bottom: 20px;
+    position: static;
+    left: auto;
+    font-size: 18px;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    border: solid rgba(255,255,255,.75);
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.buy:hover,
+.rent:hover,
+.sell:hover,
+.zestimate:hover {
+    color: #fff!important;
+    background-color: rgba(0,116,228,.75);
+    border: solid #fff;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+.searchInputAndButton {
+    width: 700px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.searchInput {
+    width: 590px;
+    height: 60px;
+    background-color: white;
+    text-align: left;
+    color: black;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.searchButton {
+    position: absolute;
+    margin-left: 19%;
+    background-color: #0074e4;
+    width: 108px;
+    height: 42px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: 55px;
+}
+
+.searchButton:hover {
+    cursor: pointer;
+}
+
+.searchBtnText {
+    width: 98px;
+    text-align: center;
+    font-size: 14.5px;
+}
+
+.editHomeFact {
+    width: 100%;
+    height: 60px;
+    background-color: #273f62;
+    opacity: 1;
+    display: inline-block;
+}
+
+.updateText {
+    width: 600px;
+    margin-left: 400px;
+    display: inline-block;
+    margin-top: -6px;
+}
+
+.homeFacts,
+.updateDetails {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.homeFacts:hover,
+.updateDetails:hover,
+.getStarted:hover {
+    cursor: pointer;
+}
+
+.homeFacts {
+    width: 200px;
+    font-weight: 700;
+}
+
+.updateDetails {
+    width: 390px;
+    font-weight: 400;
+}
+
+.getStarted {
+    width: 130px;
+    height: 32px;
+    background-color: #0074e4;
+    color: white;
+    border: none;
+    border-radius: 4.5px;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin-right: 350px;
+    margin-top: 12.5px;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+.editHomeFact {
+    width: 100%;
+    height: 60px;
+    background-color: #273f62;
+    opacity: 1;
+    display: inline-block;
+}
+
+.updateText {
+    width: 600px;
+    margin-left: 200px;
+    display: inline-block;
+    margin-top: -6px;
+}
+
+.homeFacts,
+.updateDetails {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.homeFacts:hover,
+.updateDetails:hover,
+.getStarted:hover {
+    cursor: pointer;
+}
+
+.homeFacts {
+    width: 200px;
+    font-weight: 700;
+}
+
+.updateDetails {
+    width: 390px;
+    font-weight: 400;
+}
+
+.getStarted {
+    width: 130px;
+    height: 32px;
+    background-color: #0074e4;
+    color: white;
+    border: none;
+    border-radius: 4.5px;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    float: right;
+    margin-right: 200px;
+    margin-top: 12.5px;
+}
+}
