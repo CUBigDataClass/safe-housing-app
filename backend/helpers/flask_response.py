@@ -2,6 +2,7 @@
 import json
 from flask import Response
 
+
 def json_response(body='', **kwargs):
     body = json.dumps(body).encode('utf-8')
     status = kwargs.get('status', None) or 200

@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 
 def register_blueprints(app):
     from backend.views.sample_view import heartbeat_app
@@ -9,5 +10,6 @@ def run_app(app):
 
 if __name__ == "__main__":
     app = Flask(__name__)
+    CORS(app)
     register_blueprints(app)
     run_app(app)
