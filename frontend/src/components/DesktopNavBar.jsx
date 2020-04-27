@@ -14,9 +14,6 @@ const DesktopNavBar = (props) => {
                 <a className="headerLink" href='/rent'>
                     <span className="rentLink">Rent</span>
                 </a>
-                <a className="headerLink" href='/sell'>
-                    <span className="sellLink">Sell</span>
-                </a>
             </nav>
         </header>
     )

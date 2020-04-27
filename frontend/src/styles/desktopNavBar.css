@@ -7,9 +7,18 @@ img {
     display: inline-block;
 }
 
+span{
+    font-size: 25px;
+    color: #999;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 150px;
+}
+
 .mainLogo {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-size: center no-repeat;
     position: relative;
     z-index: 1020;
@@ -51,8 +60,8 @@ img {
 
 @media screen and (max-width: 1600px) {
     .mainLogo {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         background-size: center no-repeat;
         position: relative;
         z-index: 1020;
