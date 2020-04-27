@@ -26,7 +26,7 @@ export default class FavouriteTeam extends Component {
               {
                 value: "",
                 display:
-                  "(Select your favourite team)"
+                  "(Select your university)"
               }
             ].concat(teamsFromApi)
           });
@@ -36,16 +36,52 @@ export default class FavouriteTeam extends Component {
         });
     }
 
+// render() {
+//   return (
+//     <div className="container">
+//       <h1 style={{ textAlign: 'center' }}>
+//         <span role="img" aria-label="University projector">
+//           🎥
+//         </span>
+//       </h1>
+//       <DropDownSearch title="Select University" items={this.state.teams}/>
+//     </div>
+//   );
+
 render() {
   return (
     <div className="container">
-      <h1 style={{ textAlign: 'center' }}>
-        <span role="img" aria-label="University projector">
-          🎥
-        </span>
-      </h1>
-      <DropDownSearch title="Select University" items={this.state.teams}/>
+      <select
+        value={this.state.selectedTeam}
+        onChange={e =>
+          this.setState({
+            selectedTeam: e.target.value,
+            validationError:
+              e.target.value === ""
+                ? "You must select your university"
+                : ""
+          })
+        }
+      >
+        {this.state.teams.map(team => (
+          <option
+            key={team.value}
+            value={team.value}
+          >
+            {team.display}
+          </option>
+        ))}
+      </select>
+      <div
+        style={{
+          color: "white",
+          marginTop: "5px"
+        }}
+      >
+        {this.state.validationError}
+      </div>
     </div>
   );
+
   }
 }
