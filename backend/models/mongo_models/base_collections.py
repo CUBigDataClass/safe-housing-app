@@ -56,3 +56,12 @@ class Recommendation(Base):
     City = StringField(max_length=200, required=True)
     Rating = IntField(required=False)
     loc = PointField(required=True)
+
+class School(Base):
+    meta = {'collection': 'school', 'abstract': False, 'strict': False}
+    school_name = StringField(max_length=200, required=True)
+    street_address = StringField(max_length=400, required=True)
+    city = StringField(max_length=200, required=True)
+    state = StringField(max_length=200,required=True)
+    zip = StringField(max_length=200,required=True)
+    loc = PointField(required=True)
