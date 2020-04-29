@@ -1,12 +1,11 @@
-Arizona State University,Tempe,AZ,USA -> 33.424564 -> -111.928001
 University of Nevada,Las Vegas,NV,USA -> 36.1085 -> -115.1432
-University of Colorado Boulder,Boulder,CO,USA -> 40.0076 -> -105.2659
-University of Illinois Urbana-Champaign,Urbana-Champaign,IL,USA -> 40.1020 -> -88.2272
+Arizona State University,Tempe,AZ,USA -> 33.424564 -> -111.928001
 University of North Carolina, Charlotte, NC, USA -> 36.0378 -> -79.0343
+University of Illinois Urbana-Champaign,Urbana-Champaign,IL,USA -> 40.1020 -> -88.2272
 Johns Hopkins University, Baltimore, MD, the US -> 39.328888 -> -76.620277
 Utah Valley University, Orem, UT, USA -> 40.277779 -> -111.713890
 Indiana University of Pennsylvania, Indiana, PA, the USA -> 40.617001 -> -79.160004
-University of Illinois, Champign - Urbana, IL, the US -> 40.110558 -> -88.228333
+University of Illinois, Champign- Urbana, IL, the US -> 40.110558 -> -88.228333
 Massachusetts Institute of Technology, Cambridge, MA, USA -> 42.360001 -> -71.092003
 Stanford University,Stanford, CA, USA -> 37.428230 -> -122.168861
 Harvard University, Cambridge, MA, USA -> 42.374443 -> -71.116943
@@ -22,7 +21,6 @@ Towsley Center for Continuing Medical Education, Ann Arbor, MI, US -> 42.283833 
 Villanova University, Villanova, PA, USA -> 40.034901 -> -75.337349
 Boise State University, Boise, ID, US -> 43.603600 -> -116.208710
 University of Washington, Seattle, WA, USA -> 47.655548 -> -122.303200
-University of North Carolina at Chapel Hill, Chapel Hill, NC, USA -> 35.904613 -> -79.046761
 Madonna University, Livonia, MI, USA -> 42.384148 -> -83.402824
 University of California, Santa Barbara, CA, USA -> 34.413963 -> -119.848946
 University of California, Berkeley, CA, USA -> 37.871853 -> -122.258423

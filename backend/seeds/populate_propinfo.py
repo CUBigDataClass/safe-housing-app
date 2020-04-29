@@ -5,6 +5,7 @@ from backend.services.propdetailapi import *
 from bson.json_util import loads, dumps
 import datetime
 import re
+import random
 
 
 def create_pop_city_state():
@@ -16,6 +17,8 @@ def create_pop_city_state():
 
 def create_property():
     api_response = create_pop_city_state()
+    photos_arr = populate_photos()
+    i =0
     listings = []
     result = []
     for citi in api_response:
@@ -45,7 +48,8 @@ def create_property():
             else:
                 list_date = list['list_date']
             if 'photo' not in prop:
-                photo = None
+                photo = photos_arr[i]
+                i = random.randint(0,14)
             else:
                 photo = list['photo']
 
@@ -75,17 +79,18 @@ def create_property():
             "rank":list['rank'],
             "list_tracking":list['list_tracking']
             }
-            y.append(x)
-        listings.append(y)
-    for i in listings:
-        for j in i:
-            b = PropInfo.create(j)
-            json_str = dumps(b.to_dict())
-            result.append(json_str)
-    if len(result) :
-        response = json_response({'ok'}, status=200)
-    else:
-        response = json_response({'error'}, status=206)
-    return response
+            PropInfo.create(x)
+    #         y.append(x)
+    #     listings.append(y)
+    # for i in listings:
+    #     for j in i:
+    #         b = PropInfo.create(j)
+    #         json_str = dumps(b.to_dict())
+    #         result.append(json_str)
+    # if len(result) :
+    #     response = json_response({'ok'}, status=200)
+    # else:
+    #     response = json_response({'error'}, status=206)
+    # return response
 
-# print(create_property())
+# create_property()

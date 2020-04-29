@@ -54,6 +54,7 @@ class Recommendation(Base):
     State = StringField(max_length=200, required=True)
     Name = StringField(max_length=200, required=True)
     City = StringField(max_length=200, required=True)
+    address = StringField(max_length=400, required=True)
     Rating = IntField(required=False)
     loc = PointField(required=True)
 
