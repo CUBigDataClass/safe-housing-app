@@ -1,7 +1,10 @@
 from flask import Flask
+import sys
+print(sys.path)
+sys.path.insert(0, "/")
 
 def register_blueprints(app):
-    from backend.views.sample_view import heartbeat_app
+    from views.sample_view import heartbeat_app
     app.register_blueprint(heartbeat_app)
 
 def run_app(app):

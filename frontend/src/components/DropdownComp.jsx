@@ -20,17 +20,18 @@ export default class DropDown extends Component {
   
 
   componentDidMount() {
+    var customOptions, i;
 
   if(this.props.dropdownKey === 'university')
   {
     fetch(
-      "http://demo8493610.mockable.io/universities/list"
+      "http://10.0.0.71:5000/university/list"
     )
       .then(response => {
         return response.json();
       })
       .then(data => {
-        let optionsFromApi = data["universities"].map(team => {
+        let optionsFromApi = data["uni_list"].map(team => {
           return { value: team.name, display: team.name };
         });
         this.setState({
@@ -48,12 +49,12 @@ export default class DropDown extends Component {
     }
     else if(['minbath', 'maxbath', 'minbed', 'maxbed', 'radius'].includes(this.props.dropdownKey))
     {
-      var customOptions = [{
+      customOptions = [{
         value: "",
         display: this.props.baseDisplay
       }]
 
-      for(var i=0; i<7; i++)
+      for(i=0; i<11; i++)
         customOptions.push({value: i.toString(), display: i.toString()})
 
       this.setState({
@@ -62,12 +63,12 @@ export default class DropDown extends Component {
     }
     else if(['minprice', 'maxprice'].includes(this.props.dropdownKey))
     {
-      var customOptions = [{
+      customOptions = [{
         value: "",
         display: this.props.baseDisplay
       }]
 
-      for(var i=0; i<13000; i=i+1000)
+      for(i=0; i<13000; i=i+1000)
         customOptions.push({value: i, display: `$${i}`})
 
       this.setState({
@@ -80,7 +81,7 @@ export default class DropDown extends Component {
     return (
       <div className='drop-down-comp' id={this.props.id}>
         <select
-          value={this.state.selectedValue}
+          value={this.props.selectedValue}
           onChange={e => {
 
             this.setState({

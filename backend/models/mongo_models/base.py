@@ -1,5 +1,5 @@
 from mongoengine import *
-from backend.config.settings import DevConfig
+from config.settings import DevConfig
 from datetime import datetime
 
 connect(DevConfig.MONGO_DB, host=DevConfig.MONGO_HOST, port=DevConfig.MONGO_PORT)

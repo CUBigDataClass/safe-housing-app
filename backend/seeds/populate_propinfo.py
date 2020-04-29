@@ -1,7 +1,7 @@
-from backend.models.mongo_models.base_collections import *
-from backend.helpers.flask_response import json_response
-from backend.seeds.populate_unilocation import *
-from backend.services.propdetailapi import *
+from models.mongo_models.base_collections import *
+from helpers.flask_response import json_response
+from seeds.populate_unilocation import *
+from services.propdetailapi import *
 from bson.json_util import loads, dumps
 import datetime
 import re

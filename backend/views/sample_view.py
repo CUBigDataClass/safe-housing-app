@@ -1,5 +1,5 @@
 from flask import Blueprint
-from backend.helpers.flask_response import json_response
+from helpers.flask_response import json_response
 
 heartbeat_app = Blueprint('heartbeat_app', __name__)
 

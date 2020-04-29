@@ -1,4 +1,4 @@
-from backend.models.mongo_models.base import *
+from models.mongo_models.base import *
 
 class Page(Base):
     meta = {'collection': 'page', 'abstract': False}

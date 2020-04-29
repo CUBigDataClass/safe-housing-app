@@ -10,18 +10,29 @@ import {
 
 
 function Map(data) {
+  console.log('Map data', data)
   var parksData = data.listings || [];
   var crime_data = typeof data.parentProps !== 'undefined' ? data.parentProps.crime_scores : {};
   var walk_score = typeof data.parentProps !== 'undefined' ? data.parentProps.walk_scores : {};
-
   const [selectedPark, setSelectedPark] = useState(null);
 
   return(
      <GoogleMap 
-  defaultZoom = {10} 
-  defaultCenter = {{lat: 45.421532, lng: -75.697189}}
-   
-  >
+     defaultZoom={10}
+      zoom = {15} 
+      center = {{lat: data.lat, lng: data.lng}}
+      >
+
+    <Marker
+      position = {{
+        lat: data.lat,
+        lng: data.lng
+      }}  
+      icon={{
+        url: require('../styles/university.png')
+      }}
+      />
+
     {parksData.map(park =>(
       <Marker
       key = {park.listing_id} 
@@ -35,8 +46,35 @@ function Map(data) {
 
       />
     ))}
+    {selectedPark &&
+        selectedPark.recommendation.map(reco =>(
+          <Marker 
+          position = {{
+            lat: reco.loc.coordinates[1],
+            lng: reco.loc.coordinates[0]
+          }}
+          icon={{
+            url: require('../styles/bar-pin.png')
+          }}
+          />
+        ))     
+      }
+      {selectedPark &&
+        selectedPark.school.map(reco =>(
+          <Marker 
+          position = {{
+            lat: reco.loc.coordinates[1],
+            lng: reco.loc.coordinates[0]
+          }}
+          icon={{
+            url: require('../styles/school.png')
+          }}
+          />
+        )) 
+      }
 {selectedPark && (
       <InfoWindow
+      maxWidth = '200'
       position = {{
         lat: selectedPark.loc.coordinates[1],
         lng: selectedPark.loc.coordinates[0]
@@ -64,8 +102,6 @@ function Map(data) {
         </div>
       </InfoWindow>
     )}
-
-{console.log(selectedPark)}
   </GoogleMap>  
   );
 }
@@ -74,8 +110,13 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 
 export default function MapComp(props) {
+
+  var univ_lat = typeof props.data !== 'undefined' ? props.data.loc[1]: 39.5501;
+  var univ_lng = typeof props.data !== 'undefined' ? props.data.loc[0]: -105.7821;
+  
+  
   return (
-    <div style = {{width: '58vw' , height: '125vh'}}>
+    <div style = {{width: '55vw' , height: '75vh'}}>
       <WrappedMap 
       googleMapURL = {'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDBOEkOwM6YnGA6DWHVRQSs83N35hv9fRY'}
       loadingElement = {<div style = {{height: '100%'}} />}
@@ -83,6 +124,8 @@ export default function MapComp(props) {
       mapElement = {<div style = {{height: '100%'}} />}
       parentProps={props.data}
       listings={props.listings}
+      lat={univ_lat}
+      lng={univ_lng}
       />
     </div>
   );

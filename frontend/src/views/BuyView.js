@@ -1,10 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import RecipeReviewCard from '../components/Card.jsx';
-import DesktopNavBar from '../components/DesktopNavBar.jsx';
-import CardClass from '../components/CardComp.jsx';
-import SplitPane from 'react-split-pane';
 import MapComp from '../components/MapComp.jsx';
-import ScrollArea from 'react-scrollbar';
 import '../styles/main.css';
 import Dropdown from '../components/DropdownComp.jsx';
 
@@ -15,26 +11,17 @@ export default class BuyView extends React.Component {
 	constructor(props){
 		super(props);
 				this.state = {
-				  	listings:[],
+					listings:[],
 					university: props.searchText || 'Arizona State University',
 					minbath: 0,
 					maxbath:10,
-					minbath: 0,
-					maxbath:10,
-					minbath: 0,
-					maxbath:10,
+					maxbed:10,
+					minbed: 0,
 					radius: 5,
+					minprice: 0,
+					maxprice: 12000
 				};
-		this.searchListings = this.searchListings.bind(this);
-		// this.setUnivSelectedVal = this.setUnivSelectedVal.bind(this);
-		// this.setMinBedSelectedVal = this.setMinBedSelectedVal.bind(this);
-		// this.setMaxBedSelectedVal = this.setMaxBedSelectedVal.bind(this);
-		// this.setMinBathSelectedVal = this.setMinBathSelectedVal.bind(this);
-		// this.setMaxBathSelectedVal = this.setMaxBathSelectedVal.bind(this);
-		// this.setRadiusSelectedVal = this.setRadiusSelectedVal.bind(this);
-		// this.setMinPriceSelectedVal = this.setMinPriceSelectedVal.bind(this);
-		// this.setMaxPriceSelectedVal = this.setMaxPriceSelectedVal.bind(this);
-	
+		this.searchListings = this.searchListings.bind(this);	
 	}
 
 	onChange(field, value) {
@@ -42,79 +29,30 @@ export default class BuyView extends React.Component {
         this.setState({[field]: value});
     }
 
-	// setUnivSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		university: val
-	// 	})
-	// }
-
-	// setMinBedSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		minbed: val
-	// 	})
-	// }
-
-	// setMaxBedSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		maxbed: val
-	// 	})
-	// }
-
-	// setMinBathSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		minbath: val
-	// 	})
-	// }
-
-	// setMaxBathSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		maxbath: val
-	// 	})
-	// }
-
-	// setRadiusSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		radius: val
-	// 	})
-	// }
-
-	// setMinPriceSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		minprice: val
-	// 	})
-	// }
-
-	// setMaxPriceSelectedVal(val)
-	// {
-	// 	this.setState({
-	// 		maxprice: val
-	// 	})
-	// }
-
-
 
 	componentDidMount() {
 
-		// const  url = 'http://demo8493610.mockable.io/universities/list';
-		// fetch(url)
-		// 	.then((response) => {
-		// 	  return response.json();
-		// 	})
-		// .then((data) => {
-		// 	  this.setState({
-		// 	    universities: data.universities
-		// 	  })
-		// 	})
-		// .catch((error) => {
-		// 	  console.log("error while trying to retrieve data")
-		// 	})
+		const queryString = window.location.search;
+		console.log(queryString);
+		const urlParams = new URLSearchParams(queryString.slice(1));
+		const university = urlParams.get('university');
+		const minbed = urlParams.get('minbed');
+		const maxbed = urlParams.get('maxbed');
+		const minbath = urlParams.get('minbath');
+		const maxbath = urlParams.get('maxbath');
+		const radius = urlParams.get('radius');
+		const minprice = urlParams.get('minprice');
+		const maxprice = urlParams.get('maxprice');
+		this.setState({
+			university: university || 'Arizona State University',
+			minbath: minbath ? minbath: this.state.minbath,
+			maxbath: maxbath ? maxbath: this.state.maxbath,
+			minbed: minbed ? minbed: this.state.minbed,
+			maxbed: maxbed ? maxbed: this.state.maxbed,
+			radius: radius ? radius: this.state.radius,
+			minprice: minprice ? minprice: this.state.minprice,
+			maxprice: maxprice ? maxprice: this.state.maxprice
+		})
 
 	}
 
@@ -151,14 +89,14 @@ export default class BuyView extends React.Component {
 			<div id='buy-view'>
 				<div className='map-main-div'>
 					<div className='drop-down-section'>
-						<Dropdown key='1' dropdownKey='university' baseDisplay='Select University' id='univ-drop-down' onchange={this.setUnivSelectedVal} onChange={this.onChange.bind(this)}/> 
-						<Dropdown key='2' dropdownKey='minbed' baseDisplay='Min Bed' id='minbed-drop-down' onchange={this.setMinBedSelectedVal} onChange={this.onChange.bind(this)}/>
-						<Dropdown key='3' dropdownKey='maxbed' baseDisplay='Max Bed' id='maxbed-drop-down' onchange={this.setMaxBedSelectedVal} onChange={this.onChange.bind(this)}/>
-						<Dropdown key='4' dropdownKey='minbath' baseDisplay='Min Bath' id='minbath-drop-down' onchange={this.setMinBathSelectedVal} onChange={this.onChange.bind(this)}/>
-						<Dropdown key='5' dropdownKey='maxbath' baseDisplay='Max Bath' id='maxbath-drop-down' onchange={this.setMaxBathSelectedVal} onChange={this.onChange.bind(this)}/>
-						<Dropdown key='6' dropdownKey='radius' baseDisplay='Radius' id='radius' onchange={this.setRadiusSelectedVal} onChange={this.onChange.bind(this)}/>
-						<Dropdown key='7' dropdownKey='minprice' baseDisplay='Min Price' id='minprice-drop-down' onchange={this.setMinPriceSelectedVal} onChange={this.onChange.bind(this)}/>
-						<Dropdown key='8' dropdownKey='maxprice' baseDisplay='Max Price' id='maxprice-drop-down' onchange={this.setMaxPriceSelectedVal} onChange={this.onChange.bind(this)}/>
+						<Dropdown key='1' dropdownKey='university' baseDisplay='Select University' id='univ-drop-down' onChange={this.onChange.bind(this)} selectedValue={this.state.university}/> 
+						<Dropdown key='2' dropdownKey='minbed' baseDisplay='Min Bed' id='minbed-drop-down' onChange={this.onChange.bind(this)} selectedValue={this.state.minbed}/>
+						<Dropdown key='3' dropdownKey='maxbed' baseDisplay='Max Bed' id='maxbed-drop-down' onChange={this.onChange.bind(this)} selectedValue={this.state.maxbed}/>
+						<Dropdown key='4' dropdownKey='minbath' baseDisplay='Min Bath' id='minbath-drop-down' onChange={this.onChange.bind(this)} selectedValue={this.state.minbath}/>
+						<Dropdown key='5' dropdownKey='maxbath' baseDisplay='Max Bath' id='maxbath-drop-down' onChange={this.onChange.bind(this)} selectedValue={this.state.maxbath}/>
+						<Dropdown key='6' dropdownKey='radius' baseDisplay='Radius' id='radius' onChange={this.onChange.bind(this)} selectedValue={this.state.radius}/>
+						<Dropdown key='7' dropdownKey='minprice' baseDisplay='Min Price' id='minprice-drop-down' onChange={this.onChange.bind(this)} selectedValue={this.state.minprice}/>
+						<Dropdown key='8' dropdownKey='maxprice' baseDisplay='Max Price' id='maxprice-drop-down' onChange={this.onChange.bind(this)} selectedValue={this.state.maxprice}/>
 				
 						<button className='searchButtonBuyView' onClick={this.searchListings}> Submit </button>
 					</div>

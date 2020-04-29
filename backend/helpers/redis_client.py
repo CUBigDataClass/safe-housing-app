@@ -1,5 +1,5 @@
 import redis
-from backend.config.settings import DevConfig
+from config.settings import DevConfig
 
 redis_db = redis.Redis(host=DevConfig.REDIS_HOST, port=DevConfig.REDIS_PORT, db=DevConfig.REDIS_DB)
 
