@@ -61,11 +61,18 @@ class Base(Document):
         return cls.objects(__raw__=params).update(**data, upsert=is_upsert)
 
     def to_dict(self):
-        return self.to_mongo().to_dict()
+        res = self.to_mongo().to_dict()
+        del res['_id']
+        return res
 
     @staticmethod
     def queryset_to_dict(data):
-        return [item.to_mongo().to_dict() for item in data]
+        res = []
+        for item in data:
+            parsed = item.to_mongo().to_dict()
+            del parsed['_id']
+            res.append(parsed)
+        return res
 
 
 

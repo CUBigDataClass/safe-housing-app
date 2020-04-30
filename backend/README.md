@@ -4,16 +4,23 @@ I've setup project repo and created sampel heartbeat app - Check views/sample_vi
 I've also created folders with logical meaning that requires data on 
 
 
-### Redis Server Instalation steps
+### Redis Server Installation steps
 Follow the link[https://cloud.google.com/community/tutorials/setting-up-redis]
 
 Sections:
 * Install  redis 
 * Configure redis remote access
 
+### ElasticSearch Server Installation steps
+Follow the link[https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html]
+
+Sections:
+* Download and install the debian package manually
+* SysV init vs systemd
 
 #### Helpful links for common errors:
 * https://stackoverflow.com/questions/19581059/misconf-redis-is-configured-to-save-rdb-snapshots
+
 
 https://github.com/numberly/mongo-thingy
 
@@ -25,4 +32,5 @@ ODM tutorials:
 
 Login to mongo server and run `mongod` if the server isn't running.
 Use `mongo 34.82.47.46:27017` to connect to database from client and query results.
+
 

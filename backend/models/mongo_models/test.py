@@ -6,8 +6,8 @@ class Page(Base):
     date_modified = DateTimeField(default=datetime.utcnow)
 
 
-# Sample Usage
-# page = Page.create({'title': 'MongoEngine2'})
+# Sample Usage for MongoCB
+# page = Page.create({'title': 'MongoEngine2})
 # print(page)
 
 # res = Page.get({'title': 'MongoEngine2'}, kwargs={'skip': 1, 'limit': 1})

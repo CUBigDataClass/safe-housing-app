@@ -1,0 +1,98 @@
+Alabama A&M University,Huntsville, AL,52.56,3930.0, Public,34.7846326,-86.572031
+Alabama State University,Montgomery,AL,53.26,4383.0, Public,32.3636619,-86.2940544
+Albany State University,Albany,GA,47.29,2780.0, Public,31.5690317,-84.1404238
+Alcorn State University,Fayette,MS,78.44,2570.0, Public,31.8742035,-91.13729239999999
+Allen University, Columbia,SC,100.00,642.0, Private,34.010694,-81.020246
+American Baptist College,Nashville,TN, 100.00,110.0, Private,36.202408,-86.7898667
+Arkansas Baptist College,Little Rock,AR,100.00,796.0, Private,34.7350599,-92.2895423
+Benedict College, Columbia,SC,100.00,2405.0, Private,34.012867,-81.020461
+Bennett College for Women,Greensboro,NC,91.79,545.0, Private,36.067872,-79.77921599999999
+Bethune-Cookman University,Daytona Beach,FL, 63.71,3695.0, Private,29.2110102,-81.03157499999999
+Bishop State Community College,Mobile,AL, 100.00,1878.0, Public,30.696199,-88.055684
+Bluefield State College,Bluefield,WV, 38.34,1251.0, Public,37.2672311,-81.2374456
+Bowie State University,Bowie,MD,55.06,3675.0, Public,39.0192914,-76.7594039
+Central State University, Wilberforce,OH, 37.72,1576.0, Public,39.7167824,-83.8764702
+Cheyney University of Pennsylvania,Thornbury Township, PA, 100.00,936.0, Public,39.933506,-75.5254286
+Claflin University, Orangeburg,SC,43.77,1751.0, Private,33.4988288,-80.85322510000002
+Clark Atlanta University, Atlanta,GA,84.67,2441.0, Private,33.7515658,-84.4112315
+Clinton Junior College,Rock Hill,SC,100.00,186.0, Private,34.9134144,-81.0429245
+Coahoma Community College,Clarksdale,MS, 100.00,1792.0, Public,34.2533098,-90.56897120000001
+Concordia College - Alabama,Selma,AL,53.28,512.0, Private,33.140592,-87.104708
+Coppin State University,Baltimore,MD, 43.12,2046.0, Public,39.3126142,-76.65790559999999
+Delaware State University,Dover,DE,43.74,3479.0, Public,39.186272,-75.542267
+Denmark Technical College, Denmark,SC,100.00,1422.0, Public,33.3118718,-81.1257498
+Dillard University, New Orleans, LA,40.59,1138.0, Private,29.9966395,-90.0662662
+Edward Waters College, Jacksonville,FL,52.95,891.0, Private,30.3436839,-81.6836991
+Elizabeth City State University,Elizabeth City,NC,49.00,1633.0, Public,36.281065,-76.2139598
+Fayetteville State University,Fayetteville,NC, 50.32,3935.0, Public,35.0742206,-78.8924896
+Fisk University, Nashville,TN, 83.45,705.0, Private,36.167211,-86.803796
+Florida A&M University, Tallahassee,FL, 48.95,7230.0, Public,30.4238939,-84.2874453
+Florida Memorial University, Miami Gardens,FL, 20.54,1413.0, Private,25.9190077,-80.2712878
+Fort Valley State University, Fort Valley,GA, 24.19,1947.0, Public,32.5345289,-83.8963575
+Gadsden State Community College, Gadsden,AL, 100.00,2751.0, Public,33.993977,-85.99078399999999
+Grambling State University,Grambling,LA,43.95,3264.0,Public,32.5212912,-92.71929569999999
+H Councill Trenholm State Technical College,Montgomery,AL,100.00,681.0,Public,32.350211,-86.342416
+Hampton University,Hampton,VA,29.06,3276.0,Private,37.0228392,-76.3343603
+Harris-Stowe State University,St. Louis, MO,100.00,969.0,Public,38.6332575,-90.2241738
+Huston-Tillotson University,Austin,TX,59.70,927.0,Private,30.2645512,-97.7223212
+Interdenominational Theological Center,Atlanta, GA,nan,nan,Private,33.754222,-84.409469
+J.F. Drake State Technical College,Huntsville, AL,100.00,546.0,Public,34.7717663,-86.573315
+Jackson State University,Jackson,MS,70.47,5959.0,Public,32.2968847,-90.2063965
+Jarvis Christian College,Hawkins,TX,100.00,701.0,Private,32.5891917,-95.1797935
+Johnson C. Smith University,Charlotte,NC,42.25,1318.0,Private,35.2427192,-80.85621239999999
+Lane College, Jackson,TN,43.27,1249.0, Private,35.62777500000001,-88.80611329999999
+Langston University,Langston,OK,100.00,1851.0,Public,35.9459622,-97.262907
+Lawson State Community College - Birmingham,Birmingham,AL,100.00,1773.0,Public,33.4506233,-86.8891388
+LeMoyne-Owen College,Memphis,TN,52.15,892.0,Private,35.1180562,-90.0344386
+Lincoln University - Missouri,Jefferson City,MO,100.00,2032.0,Public,38.563097,-92.171230
+Lincoln University of Pennsylvania,Lower Oxford Township, PA,27.16,1428.0,Public,39.807500,-75.927273
+Livingstone College,Salisbury,NC,64.25,1293.0,Private,35.671441,-80.484675
+Meharry Medical College,Nashville,TN, NA,nan,Private,36.1670761,-86.8069451
+Miles College,Fairfield,AL,100.00,1713.0,Private,33.480831,-86.90826799999999
+Mississippi Valley State University,Itta Bena, MS,16.33,1652.0,Public,33.512823,-90.341736
+Morehouse College,Atlanta,GA,84.03,2003.0,Private,33.742784,-84.411958
+Morehouse School of Medicine,Atlanta,GA,nan,nan,Private,33.743087,-84.412001
+Morgan State University,Baltimore,MD,65.25,5544.0,Public,39.3437959,-76.5843847
+Morris College,Sumter, SC,100.00,770.0,Private,33.938031,-80.347003
+Norfolk State University,Norfolk,VA,65.67,4416.0,Public,36.8480161,-76.262085
+North Carolina A&T State University,Greensboro,NC,57.00,8423.0,Public,36.0741294,-79.7748384
+North Carolina Central University,Durham,NC,43.22,5035.0,Public,35.97298200000001,-78.8962889
+Oakwood University,Huntsville,AL,47.87,1750.0,Private,34.751841,-86.655845
+Paine College,Augusta,GA,21.81,783.0,Private,33.4695551,-81.9932536
+Paul Quinn College,Dallas,TX,89.97,260.0,Private,32.6804373,-96.75584889999999
+Philander Smith College,Little Rock,AR,100.00,521.0,Private,34.7371492,-92.28296929999999
+Prairie View A & M University,Prairie View,TX,39.13,6313.0,Public,30.093908,-95.989800
+Rust College,Holly Springs, MS,38.85,908.0,Private,34.7764601,-89.4476005
+Saint Augustine's University,Raleigh,NC,74.03,1001.0,Private,35.7876962,-78.6188766
+Savannah State University,Savannah,GA,77.63,4196.0,Public,32.0245213,-81.0626367
+Selma University,Selma,AL,100.00,419.0,Private,32.4204999,-87.03489990000001
+Shaw University,Raleigh,NC,59.35,1519.0,Private,35.771187,-78.6377146
+Shelton State Community College,Tuscaloosa,AL,100.00,2307.0,Public,33.120633,-87.561464
+Shorter College,North Little Rock,AR,100.00,313.0,Private,34.7592275,-92.2604236
+Simmons College - Kentucky,Louisville,KY,100.00,121.0,Private,38.2394955,-85.7648298
+South Carolina State University,Orangeburg,SC,84.54,2581.0,Public,33.4983441,-80.85014919999999
+Southern University & A&M College,Baton Rouge,LA,53.65,4446.0,Public,30.5267645,-91.1935768
+Southern University at New Orleans,New Orleans,LA,20.70,1189.0,Public,30.0259133,-90.0449055
+Southern University at Shreveport,Shreveport,LA,100.00,2046.0,Public,32.544248,-93.8346073
+Southwestern Christian College,Terrell,TX,100.00,153.0,Private,32.7353423,-96.28573209999999
+Spelman College,Atlanta,GA,54.00,2072.0,Private,33.7463597,-84.41229340000001
+St. Philip's College,San Antonio,TX,100.00,1622.0,Public,29.41408629999999,-98.45482030000001
+Stillman College,Tuscaloosa,AL,59.01,944.0,Private,33.1982647,-87.5859218
+Talladega College,Talladega,AL,100.00,752.0,Private,33.4327519,-86.1135613
+Tennessee State University,Nashville,TN,100.00,5678.0,Public,36.1668224,-86.8275815
+Texas College,Tyler,TX,100.00,778.0,Private,32.374895,-95.312516
+Texas Southern University,Houston,TX,51.92,5842.0,Public,29.7217625,-95.3606121
+Tougaloo College,Jackson,MS,40.30,872.0,Private,32.4048131,-90.1607274
+Tuskegee University,Tuskegee,AL,49.22,2489.0,Private,32.430678,-85.7072853
+University of Arkansas at Pine Bluff,Pine Bluff,AR,38.68,2188.0,Public,34.2468716,-92.0213392
+University of Maryland Eastern Shore,Princess Anne,MD,61.27,3192.0,Public,38.2178752,-75.6910982
+University of the District of Columbia,Washington,DC,100.00,1902.0,Public,38.944677,-77.06562989999999
+Virginia State University,Petersburg,VA,80.06,4284.0,Public,37.2384613,-77.41987209999999
+Virginia Union University,Richmond,VA,23.89,1286.0,Private,37.5625916,-77.4514696
+Virginia University of Lynchburg,Lynchburg,VA,100.00,134.0,Private,37.3952218,-79.15157219999999
+Voorhees College,Denmark,SC,50.04,452.0,Private,33.3072977,-81.13000880000001
+West Virginia State University,Dunbar,WV,41.44,1950.0,Public,38.3789586,-81.7665882
+Wilberforce University,Wilberforce,OH,37.54,348.0,Private,39.710638,-83.878929
+Wiley College,Marshall,TX,100.00,1259.0,Private,32.5384868,-94.37518709999999
+Winston-Salem State University,Winston-Salem,NC,60.16,4098.0,Public,36.089874,-80.2251168
+Xavier University of Louisiana,New Orleans,LA,65.99,2237.0,Private,29.963863,-90.107084
