@@ -1,4 +1,4 @@
-from backend.models.mongo_models.base import *
+from models.mongo_models.base import *
 
 class Page(Base):
     meta = {'collection': 'page', 'abstract': False}
@@ -6,7 +6,7 @@ class Page(Base):
     date_modified = DateTimeField(default=datetime.utcnow)
 
 
-# Sample Usage
+# Sample Usage for MongoCB
 # page = Page.create({'title': 'MongoEngine2})
 # print(page)
 

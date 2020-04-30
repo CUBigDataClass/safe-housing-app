@@ -1,6 +1,7 @@
 import os
 import configparser
 
+# Configuration file for setting up Redis,Elastic Search, MongoDB
 class BaseConfig():
    API_PREFIX = '/api'
    TESTING = False

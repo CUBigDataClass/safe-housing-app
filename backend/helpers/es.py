@@ -3,6 +3,7 @@ import json
 from elasticsearch import Elasticsearch , RequestsHttpConnection
 from backend.config.settings import DevConfig
 
+# Elastic Search Helper class -Elastic Search Client
 class Base():
     # Check if the index exists or not
     def connectES(esEndPoint):

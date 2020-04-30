@@ -1,8 +1,8 @@
+
 from flask import Blueprint, request
 from backend.models.mongo_models.base_collections import *
 from backend.helpers.flask_response import json_response
 import random
-
 
 heartbeat_app = Blueprint('heartbeat_app', __name__)
 
@@ -11,7 +11,7 @@ heartbeat_app = Blueprint('heartbeat_app', __name__)
 def heartbeat():
     return json_response({"status": "OK"})
 
-
+# API to fetch the Property details and Recommendations based on Geolocation of the University and filter properties
 @heartbeat_app.route('/university/fetch', methods=['GET', 'POST'])
 def fetch():
     query_parameters = request.args
@@ -147,7 +147,7 @@ def fetch():
     return response
 
 
-
+# API to retrieve the list of universities to available to the application
 @heartbeat_app.route('/university/list', methods=['GET', 'POST'])
 def listings():
     try:

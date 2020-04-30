@@ -18,7 +18,6 @@ Mako==1.0.4
 MarkupSafe==0.23
 Mongo-Thingy==0.12.0
 mongoengine==0.10.7
-psycopg2==2.8.4
 pycparser==2.19
 PyJWT==1.4.0
 pymongo==3.10.1

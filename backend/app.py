@@ -1,8 +1,12 @@
 from flask import Flask
 from flask_cors import CORS
+import sys
+from backend.views.sample_view import heartbeat_app
+
+# This is the main file to create the instance of flask application
+sys.path.insert(0, "/backend")
 
 def register_blueprints(app):
-    from backend.views.sample_view import heartbeat_app
     app.register_blueprint(heartbeat_app)
 
 def run_app(app):

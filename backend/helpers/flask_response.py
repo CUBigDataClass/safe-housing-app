@@ -2,6 +2,7 @@
 import json
 from flask import Response
 
+#Format of Flask response to add status code and response messages
 
 def json_response(body='', **kwargs):
     body = json.dumps(body).encode('utf-8')

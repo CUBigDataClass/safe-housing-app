@@ -7,7 +7,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
@@ -16,6 +15,8 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import HomeIcon from '../styles/house2.jpg';
+import StarRateIcon from '@material-ui/icons/StarRate';
+import '../styles/card.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,10 +38,11 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     backgroundColor: red[500],
-  },
+  }
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard(props) {
+  var cardData = props.data;
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -57,18 +59,19 @@ export default function RecipeReviewCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+
+        title={cardData.name}
+        subheader={`Costs $`+ cardData.price +`, `+cardData.beds+` beds, `+cardData.baths+` baths, Listed on `+ new Date(Date.parse(cardData.list_date)).toUTCString()}
       />
       <CardMedia
         className={classes.media}
-        image= {HomeIcon}
-        title="Paella dish"
+        image= {cardData.photo ? cardData.photo : HomeIcon} 
+        title={cardData.name}
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+        <Typography variant="body2" color="textPrimary" component="p">
+          <h3>{`Utilities last modified: `+ new Date(Date.parse(cardData.last_update)).toUTCString()} <br/>
+            {`Listing at `+cardData.name+` costs `+ cardData.short_price +`, `+cardData.beds+` beds, `+cardData.baths+` baths, Listed on `+ new Date(Date.parse(cardData.list_date)).toUTCString()}</h3>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -91,29 +94,68 @@ export default function RecipeReviewCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
           <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
+            <div className='card-headers'>Description</div>
+              <div style={{columns: '2 auto'}}>
+              <div colSpan='6'>
+                {`Property Rank: `+ cardData.rank} <br />
+                {`Sqft: `+ cardData.sqft} <br/>
+                {`Property Status: `+ cardData.prop_status} <br/>
+                {cardData.is_showcase? `Up for Showing: Yes`:  `Up for Showing: No`}
+              </div>
+
+              <div colSpan='6'>
+                {`Listing Source: `+ cardData.source} <br/>
+                {cardData.has_leadform? `Has Lead Form: Yes `: `Has Lead Form: No`} <br/>
+                {`Property Type: `+ cardData.prop_type} <br/>
+                {cardData.is_showcase? `Has special utitlities: Yes`:  `Has special utitlities: No`}
+              </div>
+            </div>
+            
+
           </Typography>
           <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-            heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-            browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-            and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-            pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-            without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-            medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-            again without stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography>
+            <div className='card-headers'>Restaurtant Recommendations</div>
+
+            { cardData.recommendation.map((value, index) => {
+              return(
+                <div>
+                  <div className="reco-card">
+                  <div className="reco-name">
+                    {value.Name}
+                  </div>
+                  <div className="reco-address">
+                    {value.address}
+                  </div>
+                </div>
+                  <div className="reco-rating">
+                    {Array(value.Rating).fill(<StarRateIcon />)}
+                  </div> 
+                </div>
+              )
+            }          
+              )}
+         </Typography>
+
+         <Typography paragraph>
+            <div className='card-headers'>Elementary School Recommendations</div>
+            { cardData.school.map((value, index) => {
+              return(
+                <div className="school-reco-card">
+                  <div className="school-reco-name">
+                    {value.school_name}
+                  </div>
+                  <div className="school-reco-address">
+                    {value.street_address}
+                  </div>
+                  <div className="school-reco-rating">
+                    {Array(value.rating).fill(<StarRateIcon />)}
+                  </div>     
+                </div>
+              )
+            }          
+              )}
+         </Typography>
         </CardContent>
       </Collapse>
     </Card>

@@ -4,11 +4,46 @@ body {
   font-family: sans-serif;
 }
 
+.drop-down-comp{
+	float: left;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.drop-down-section{	
+	display: table-cell;
+}
+
+.drop-down-section button{
+	height: 35px;
+	border-radius: 5px;
+	background-color: #007bff;
+	
+}
+
 .map-main-div {
-	overflow-y: hidden;
-	position: fixed
+	overflow: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    margin-top: 10px;
+    width: 55vw;
+    height: 100vh;
+    border-style: solid;
+    margin-left: 5px;
 }
 
 .card-main-div{
 	float: right;
+	margin-right: 15px;
+	border-style: solid;
+	margin-top: 10px;
+}
+
+.searchButtonBuyView{
+	height: 50px !important;
+    border-radius: 5px;
+    background-color: #007bff;
+    width: 255px;
+    font-size: large;
+    margin-left: 4px;
 }

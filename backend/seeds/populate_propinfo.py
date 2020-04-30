@@ -8,6 +8,8 @@ import re
 import random
 
 
+
+# Obtain the Property details by quering for city and state
 def create_pop_city_state():
     result = []
     pairs = get_city_state()
@@ -15,6 +17,7 @@ def create_pop_city_state():
           result.append(get_prop_details(pair[0],pair[1]).json())
     return result
 
+# Populate Property details as a document JSON to MongoDB store
 def create_property():
     api_response = create_pop_city_state()
     photos_arr = populate_photos()
@@ -80,17 +83,17 @@ def create_property():
             "list_tracking":list['list_tracking']
             }
             PropInfo.create(x)
-    #         y.append(x)
-    #     listings.append(y)
-    # for i in listings:
-    #     for j in i:
-    #         b = PropInfo.create(j)
-    #         json_str = dumps(b.to_dict())
-    #         result.append(json_str)
-    # if len(result) :
-    #     response = json_response({'ok'}, status=200)
-    # else:
-    #     response = json_response({'error'}, status=206)
-    # return response
+            y.append(x)
+        listings.append(y)
+    for i in listings:
+        for j in i:
+            b = PropInfo.create(j)
+            json_str = dumps(b.to_dict())
+            result.append(json_str)
+    if len(result) :
+        response = json_response({'ok'}, status=200)
+    else:
+        response = json_response({'error'}, status=206)
+    return response
 
-# create_property()
+
