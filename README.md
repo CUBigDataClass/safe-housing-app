@@ -46,4 +46,4 @@ Steps to run the app locally:
 		npm install
 		npm start
 
-## The Graduate Housing Recommendator App is hosted at the link http://35.239.108.43:3000/
+#### The Graduate Housing Recommendator App is hosted at the link http://35.239.108.43:3000/
